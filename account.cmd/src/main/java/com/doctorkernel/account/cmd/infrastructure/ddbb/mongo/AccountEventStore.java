@@ -1,10 +1,12 @@
-package com.doctorkernel.account.cmd.infrastructure;
+package com.doctorkernel.account.cmd.infrastructure.ddbb.mongo;
 
 import com.doctorkernel.account.cmd.domain.model.AccountAggregate;
+import com.doctorkernel.account.cmd.infrastructure.ddbb.mongo.EventStoreRepository;
 import com.doctorkernel.cqrs.core.domain.events.EventModel;
 import com.doctorkernel.cqrs.core.domain.events.EventStore;
 import com.doctorkernel.cqrs.core.domain.events.BaseEvent;
 import com.doctorkernel.cqrs.core.domain.exceptions.AggregateNotFoundException;
+import com.doctorkernel.cqrs.core.domain.producers.EventProducer;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,7 @@ import java.util.stream.StreamSupport;
 public class AccountEventStore implements EventStore {
 
     private final EventStoreRepository eventStoreRepository;
+    private final EventProducer eventProducer;
 
     @Override
     public void saveEvents(String aggregateId, Iterable<BaseEvent> events, int expectedVersion) {
@@ -34,6 +37,10 @@ public class AccountEventStore implements EventStore {
             var persistedEvent= eventStoreRepository.save(eventModel);
 
             // [Producer] sent events to Kafka
+            if(!persistedEvent.getId().isEmpty()){
+                eventProducer.produce(event.getClass().getSimpleName(), event);
+            }
+
         });
     }
 

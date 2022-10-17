@@ -1,4 +1,4 @@
-package com.doctorkernel.account.cmd.infrastructure;
+package com.doctorkernel.account.cmd.infrastructure.ddbb.mongo;
 
 import com.doctorkernel.cqrs.core.domain.events.EventModel;
 import org.springframework.data.mongodb.repository.MongoRepository;
