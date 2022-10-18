@@ -13,17 +13,3 @@ spring:
       bootstrap-server: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-  datasource:
-    url: jdbc:h2:file:~/accounts;AUTO_SERVER=true
-    username: root
-    password: root
-    driver-class-name: org.h2.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: update
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: true

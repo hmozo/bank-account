@@ -1,8 +1,8 @@
-package com.doctorkernel.account.cmd.interfaces.rest;
+package com.doctorkernel.account.cmd.api.rest;
 
 import com.doctorkernel.account.cmd.domain.commands.OpenAccountCommand;
-import com.doctorkernel.account.cmd.interfaces.rest.dto.BaseResponse;
-import com.doctorkernel.account.cmd.interfaces.rest.dto.OpenAccountResponse;
+import com.doctorkernel.account.cmd.api.rest.dto.BaseResponse;
+import com.doctorkernel.account.cmd.api.rest.dto.OpenAccountResponse;
 import com.doctorkernel.cqrs.core.domain.commands.CommandDispatcher;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.doctorkernel.account.cmd.interfaces.rest.dto;
+package com.doctorkernel.account.cmd.api.rest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

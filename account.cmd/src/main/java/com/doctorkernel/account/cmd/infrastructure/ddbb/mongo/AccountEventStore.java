@@ -1,8 +1,7 @@
 package com.doctorkernel.account.cmd.infrastructure.ddbb.mongo;
 
+import com.doctorkernel.account.cmd.domain.entities.EventModel;
 import com.doctorkernel.account.cmd.domain.model.AccountAggregate;
-import com.doctorkernel.account.cmd.infrastructure.ddbb.mongo.EventStoreRepository;
-import com.doctorkernel.cqrs.core.domain.events.EventModel;
 import com.doctorkernel.cqrs.core.domain.events.EventStore;
 import com.doctorkernel.cqrs.core.domain.events.BaseEvent;
 import com.doctorkernel.cqrs.core.domain.exceptions.AggregateNotFoundException;

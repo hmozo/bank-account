@@ -1,6 +1,6 @@
 package com.doctorkernel.account.common.events;
 
-import com.doctorkernel.account.common.dto.AccountType;
+import com.doctorkernel.account.common.valueobjects.AccountType;
 import com.doctorkernel.cqrs.core.domain.events.BaseEvent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
