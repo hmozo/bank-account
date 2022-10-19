@@ -1,4 +1,4 @@
-package com.doctorkernel.account.cmd.domain.commands;
+package com.doctorkernel.account.cmd.domain.services;
 
 import com.doctorkernel.cqrs.core.domain.commands.BaseCommand;
 import com.doctorkernel.cqrs.core.domain.commands.CommandHandlerMethod;

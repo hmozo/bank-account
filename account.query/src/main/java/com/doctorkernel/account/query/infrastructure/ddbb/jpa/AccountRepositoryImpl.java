@@ -1,7 +1,7 @@
 package com.doctorkernel.account.query.infrastructure.ddbb.jpa;
 
 import com.doctorkernel.account.query.domain.entities.BankAccount;
-import com.doctorkernel.account.query.domain.repositories.AccountRepository;
+import com.doctorkernel.account.query.domain.services.AccountRepository;
 import com.doctorkernel.cqrs.core.domain.entities.BaseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -25,17 +25,27 @@ public class AccountRepositoryImpl implements AccountRepository {
     }
 
     @Override
+    public List<BankAccount> findAll() {
+        return accountJPARepository.findAll();
+    }
+
+    @Override
     public void deleteById(String id) {
         accountJPARepository.deleteById(id);
     }
 
     @Override
-    public Optional<BankAccount> findByAccountHolder(String accountHolder) {
+    public List<BankAccount> findByAccountHolder(String accountHolder) {
         return accountJPARepository.findByAccountHolder(accountHolder);
     }
 
     @Override
     public List<BaseEntity> findByBalanceLessThan(double balance) {
         return accountJPARepository.findByBalanceLessThan(balance);
+    }
+
+    @Override
+    public List<BaseEntity> findByBalanceGreaterThan(double balance) {
+        return accountJPARepository.findByBalanceGreaterThan(balance);
     }
 }

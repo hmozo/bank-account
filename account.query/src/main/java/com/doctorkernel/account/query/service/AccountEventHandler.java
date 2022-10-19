@@ -1,11 +1,11 @@
-package com.doctorkernel.account.query.domain.events;
+package com.doctorkernel.account.query.service;
 
 import com.doctorkernel.account.common.events.AccountClosedEvent;
 import com.doctorkernel.account.common.events.AccountOpenedEvent;
 import com.doctorkernel.account.common.events.FundsDepositedEvent;
 import com.doctorkernel.account.common.events.FundsWithdrawnEvent;
 import com.doctorkernel.account.query.domain.entities.BankAccount;
-import com.doctorkernel.account.query.domain.repositories.AccountRepository;
+import com.doctorkernel.account.query.domain.services.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

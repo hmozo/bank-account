@@ -1,4 +1,4 @@
-package com.doctorkernel.account.query.domain.events;
+package com.doctorkernel.account.query.service;
 
 import com.doctorkernel.account.common.events.AccountClosedEvent;
 import com.doctorkernel.account.common.events.AccountOpenedEvent;

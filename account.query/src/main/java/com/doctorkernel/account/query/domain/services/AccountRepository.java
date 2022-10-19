@@ -1,4 +1,4 @@
-package com.doctorkernel.account.query.domain.repositories;
+package com.doctorkernel.account.query.domain.services;
 
 import com.doctorkernel.account.query.domain.entities.BankAccount;
 import com.doctorkernel.cqrs.core.domain.entities.BaseEntity;
@@ -10,7 +10,10 @@ import java.util.Optional;
 public interface AccountRepository {
     void save(BankAccount bankAccount);
     Optional<BankAccount> findById(String id);
+    List<BankAccount> findAll();
     void deleteById(String id);
-    Optional<BankAccount> findByAccountHolder(String accountHolder);
+    List<BankAccount> findByAccountHolder(String accountHolder);
     List<BaseEntity> findByBalanceLessThan(double balance);
+    List<BaseEntity> findByBalanceGreaterThan(double balance);
+
 }

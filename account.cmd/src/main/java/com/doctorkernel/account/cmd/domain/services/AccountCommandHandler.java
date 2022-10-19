@@ -1,5 +1,9 @@
-package com.doctorkernel.account.cmd.domain.commands;
+package com.doctorkernel.account.cmd.domain.services;
 
+import com.doctorkernel.account.cmd.domain.commands.CloseAccountCommand;
+import com.doctorkernel.account.cmd.domain.commands.DepositFundsCommand;
+import com.doctorkernel.account.cmd.domain.commands.OpenAccountCommand;
+import com.doctorkernel.account.cmd.domain.commands.WithdrawFundsCommand;
 import com.doctorkernel.account.cmd.domain.model.AccountAggregate;
 import com.doctorkernel.cqrs.core.domain.handlers.EventSourcingHandler;
 import lombok.AllArgsConstructor;

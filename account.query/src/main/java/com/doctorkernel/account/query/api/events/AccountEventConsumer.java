@@ -1,10 +1,10 @@
-package com.doctorkernel.account.query.infrastructure.brokers.kafka;
+package com.doctorkernel.account.query.api.events;
 
 import com.doctorkernel.account.common.events.AccountClosedEvent;
 import com.doctorkernel.account.common.events.AccountOpenedEvent;
 import com.doctorkernel.account.common.events.FundsDepositedEvent;
 import com.doctorkernel.account.common.events.FundsWithdrawnEvent;
-import com.doctorkernel.account.query.domain.events.EventHandler;
+import com.doctorkernel.account.query.service.EventHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;

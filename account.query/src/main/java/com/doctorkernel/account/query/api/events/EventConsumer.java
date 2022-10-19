@@ -1,4 +1,4 @@
-package com.doctorkernel.account.query.infrastructure.brokers.kafka;
+package com.doctorkernel.account.query.api.events;
 
 import com.doctorkernel.account.common.events.AccountClosedEvent;
 import com.doctorkernel.account.common.events.AccountOpenedEvent;

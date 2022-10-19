@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface AccountJPARepository extends JpaRepository<BankAccount, String> {
-    Optional<BankAccount> findByAccountHolder(String accountHolder);
+    List<BankAccount> findByAccountHolder(String accountHolder);
     List<BaseEntity> findByBalanceLessThan(double balance);
+    List<BaseEntity> findByBalanceGreaterThan(double balance);
 }
