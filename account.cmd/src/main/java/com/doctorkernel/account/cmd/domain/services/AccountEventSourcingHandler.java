@@ -3,6 +3,7 @@ package com.doctorkernel.account.cmd.domain.services;
 import com.doctorkernel.account.cmd.domain.model.AccountAggregate;
 import com.doctorkernel.cqrs.core.domain.events.EventStore;
 import com.doctorkernel.cqrs.core.domain.model.AggregateRoot;
+import com.doctorkernel.cqrs.core.domain.services.EventProducer;
 import com.doctorkernel.cqrs.core.domain.services.EventSourcingHandler;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.util.Comparator;
 public class AccountEventSourcingHandler implements EventSourcingHandler<AccountAggregate> {
 
     private final EventStore eventStore;
+    private final EventProducer eventProducer;
 
     @Override
     public void save(AggregateRoot aggregate) {
@@ -31,5 +33,19 @@ public class AccountEventSourcingHandler implements EventSourcingHandler<Account
             aggregate.setVersion(latestVersionOpt.get());
         }
         return aggregate;
+    }
+
+    @Override
+    public void republishEvents() {
+        var aggregateIds= eventStore.getAggregateIds();
+        aggregateIds.forEach(aggregateid->{
+            var aggregate= getById(aggregateid);
+            if (aggregate!=null && aggregate.getActive()){
+                var events= eventStore.getEvents(aggregateid);
+                events.stream().forEach(event->{
+                    eventProducer.produce(event.getClass().getSimpleName(), event);
+                });
+            }
+        });
     }
 }

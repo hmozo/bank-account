@@ -1,4 +1,6 @@
 package com.doctorkernel.account.cmd.domain.commands;
 
-public class RestoreReadDbCommand {
+import com.doctorkernel.cqrs.core.domain.commands.BaseCommand;
+
+public class RestoreReadDbCommand extends BaseCommand {
 }

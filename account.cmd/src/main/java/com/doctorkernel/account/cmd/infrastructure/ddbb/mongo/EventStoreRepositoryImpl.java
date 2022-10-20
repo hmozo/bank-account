@@ -24,4 +24,9 @@ public class EventStoreRepositoryImpl implements EventStoreRepository {
     public EventModel save(EventModel eventModel) {
         return eventStoreMongoRepository.save(eventModel);
     }
+
+    @Override
+    public List<EventModel> findAll() {
+        return eventStoreMongoRepository.findAll();
+    }
 }
