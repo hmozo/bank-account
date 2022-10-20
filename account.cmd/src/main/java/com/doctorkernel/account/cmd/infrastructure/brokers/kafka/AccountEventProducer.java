@@ -1,7 +1,7 @@
 package com.doctorkernel.account.cmd.infrastructure.brokers.kafka;
 
 import com.doctorkernel.cqrs.core.domain.events.BaseEvent;
-import com.doctorkernel.cqrs.core.domain.producers.EventProducer;
+import com.doctorkernel.cqrs.core.domain.services.EventProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;

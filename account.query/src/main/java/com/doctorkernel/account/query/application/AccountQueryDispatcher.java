@@ -1,9 +1,9 @@
-package com.doctorkernel.account.query.service;
+package com.doctorkernel.account.query.application;
 
 import com.doctorkernel.cqrs.core.domain.entities.BaseEntity;
 import com.doctorkernel.cqrs.core.domain.queries.BaseQuery;
-import com.doctorkernel.cqrs.core.domain.queries.QueryDispatcher;
-import com.doctorkernel.cqrs.core.domain.queries.QueryHandlerMethod;
+import com.doctorkernel.cqrs.core.application.QueryDispatcher;
+import com.doctorkernel.cqrs.core.domain.services.QueryHandlerMethod;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

@@ -1,8 +1,8 @@
-package com.doctorkernel.account.cmd.domain.services;
+package com.doctorkernel.account.cmd.application;
 
 import com.doctorkernel.cqrs.core.domain.commands.BaseCommand;
-import com.doctorkernel.cqrs.core.domain.commands.CommandHandlerMethod;
-import com.doctorkernel.cqrs.core.domain.commands.CommandDispatcher;
+import com.doctorkernel.cqrs.core.domain.services.CommandHandlerMethod;
+import com.doctorkernel.cqrs.core.application.CommandDispatcher;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

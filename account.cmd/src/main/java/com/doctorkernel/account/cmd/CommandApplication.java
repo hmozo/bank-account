@@ -2,7 +2,7 @@ package com.doctorkernel.account.cmd;
 
 import com.doctorkernel.account.cmd.domain.commands.*;
 import com.doctorkernel.account.cmd.domain.services.CommandHandler;
-import com.doctorkernel.cqrs.core.domain.commands.CommandDispatcher;
+import com.doctorkernel.cqrs.core.application.CommandDispatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

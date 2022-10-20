@@ -3,7 +3,7 @@ package com.doctorkernel.account.cmd.api.rest;
 import com.doctorkernel.account.cmd.domain.commands.OpenAccountCommand;
 import com.doctorkernel.account.cmd.api.rest.dto.BaseResponse;
 import com.doctorkernel.account.cmd.api.rest.dto.OpenAccountResponse;
-import com.doctorkernel.cqrs.core.domain.commands.CommandDispatcher;
+import com.doctorkernel.cqrs.core.application.CommandDispatcher;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EventStoreRepository extends MongoRepository<EventModel, String> {
+public interface EventStoreMongoRepository extends MongoRepository<EventModel, String> {
     List<EventModel> findByAggregateIdentifier(String aggregateIdentifier);
 }

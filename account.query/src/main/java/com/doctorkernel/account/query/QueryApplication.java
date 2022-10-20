@@ -5,7 +5,7 @@ import com.doctorkernel.account.query.domain.queries.FindAccountByIdQuery;
 import com.doctorkernel.account.query.domain.queries.FindAccountWithBalanceQuery;
 import com.doctorkernel.account.query.domain.queries.FindAllAccountsQuery;
 import com.doctorkernel.account.query.domain.services.QueryHandler;
-import com.doctorkernel.cqrs.core.domain.queries.QueryDispatcher;
+import com.doctorkernel.cqrs.core.application.QueryDispatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

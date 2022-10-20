@@ -1,9 +1,9 @@
-package com.doctorkernel.account.cmd.domain.events;
+package com.doctorkernel.account.cmd.domain.services;
 
 import com.doctorkernel.account.cmd.domain.model.AccountAggregate;
 import com.doctorkernel.cqrs.core.domain.events.EventStore;
 import com.doctorkernel.cqrs.core.domain.model.AggregateRoot;
-import com.doctorkernel.cqrs.core.domain.handlers.EventSourcingHandler;
+import com.doctorkernel.cqrs.core.domain.services.EventSourcingHandler;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

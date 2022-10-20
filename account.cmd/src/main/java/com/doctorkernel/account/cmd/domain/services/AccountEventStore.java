@@ -1,11 +1,11 @@
-package com.doctorkernel.account.cmd.infrastructure.ddbb.mongo;
+package com.doctorkernel.account.cmd.domain.services;
 
 import com.doctorkernel.account.cmd.domain.entities.EventModel;
 import com.doctorkernel.account.cmd.domain.model.AccountAggregate;
-import com.doctorkernel.cqrs.core.domain.events.EventStore;
 import com.doctorkernel.cqrs.core.domain.events.BaseEvent;
+import com.doctorkernel.cqrs.core.domain.events.EventStore;
 import com.doctorkernel.cqrs.core.domain.exceptions.AggregateNotFoundException;
-import com.doctorkernel.cqrs.core.domain.producers.EventProducer;
+import com.doctorkernel.cqrs.core.domain.services.EventProducer;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

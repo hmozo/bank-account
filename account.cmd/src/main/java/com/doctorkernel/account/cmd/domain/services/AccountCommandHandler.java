@@ -5,7 +5,7 @@ import com.doctorkernel.account.cmd.domain.commands.DepositFundsCommand;
 import com.doctorkernel.account.cmd.domain.commands.OpenAccountCommand;
 import com.doctorkernel.account.cmd.domain.commands.WithdrawFundsCommand;
 import com.doctorkernel.account.cmd.domain.model.AccountAggregate;
-import com.doctorkernel.cqrs.core.domain.handlers.EventSourcingHandler;
+import com.doctorkernel.cqrs.core.domain.services.EventSourcingHandler;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
